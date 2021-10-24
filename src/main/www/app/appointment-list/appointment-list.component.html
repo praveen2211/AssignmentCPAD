@@ -1,0 +1,27 @@
+
+<div class="container">
+
+        <table class="table table-dark">
+                <thead>
+                  <tr>
+                    <th scope="col">S.No</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Mode</th>
+                    <!-- <th scope="col"></th> -->
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor= "let s of appointmentList; let i = index;">
+                    <th scope="row">{{i + 1}}</th>
+                    <td>{{s.name}}</td>
+                    <td>{{s.email}}</td>
+                    <td>{{s.mode}}</td>
+                 
+                  </tr>
+                 
+                </tbody>
+              </table>
+</div>
+
+

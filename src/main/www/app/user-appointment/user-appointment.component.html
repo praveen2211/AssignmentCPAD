@@ -1,0 +1,280 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <h1 style=" background: white; text-align: center;">Enter details to Schedule Appointment</h1>
+        </div>   
+    </div>
+
+    <div class="row">
+        <div class="custom-component pt-2">
+            <form [formGroup]="form">
+
+            <div class="row">
+                <div class="com-md-12">
+                    <h2>Add Patient's Details</h2>
+                </div>
+            </div>
+          
+              <div class="row">
+                <div class="col-md-11 col-sm-10 col-10 tabs-convert-ninety-row">
+                 
+                  <div class="block p-3 mt-2" >
+                    <div class="row">
+                      <div class="col-md-12">
+                        <span>Name</span>
+                        <div class="input-group mb-2">
+                          <input type="text" class="form-control"
+                            id="name"
+                            placeholder="Enter Name"
+                            formControlName="name">
+                        </div>
+                      </div>
+          
+                    </div>
+          
+                    <div class="row">
+                      <div class="col-md-12">
+                        <form-errors [control]="f.name"></form-errors>
+                      </div>
+                    </div>
+
+                    
+                    <div class="row">
+                        <div class="col-md-12">
+                          <span>Email</span>
+                            <div class="input-group mb-2">
+                                <input type="text" class="form-control"
+                                    id="email"
+                                    placeholder="Enter Email here"
+                                    formControlName="email">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form-errors [control]="f.email"></form-errors>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                          <span>Phone No.</span>
+                            <div class="input-group mb-2">
+                                <input type="text" class="form-control"
+                                    id="phoneNo"
+                                    placeholder="Enter Phone no. here"
+                                    formControlName="phoneNo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form-errors [control]="f.phoneNo"></form-errors>
+                        </div>
+                    </div>
+          
+                    <div class="row pt-2">
+                        <div class="col-md-12">
+                            <span>Age</span>
+                            <div class="input-group mb-2">
+                                <input type="number" class="form-control"
+                                    formControlName="age"
+                                    id="btn-text"
+                                    placeholder="Enter Age here">
+                            </div>
+                        </div>
+                    </div>
+          
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form-errors [control]="f.age"></form-errors>
+                        </div>
+                    </div>
+
+                    <div class="row pt-2">
+                        <div class="col-md-12">
+                          <span>Gender</span>
+                          <div class="radio" *ngFor="let gender of genders">
+                            <label>
+                              <input type="radio" [value]="gender"
+                              formControlName = "gender">{{gender | uppercase}}
+                            </label>
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form-errors [control]="f.gender"></form-errors>
+                        </div>
+                    </div>
+               
+                    <div class="row pt-2">
+                        <div class="col-md-12">
+                            <span>State</span>
+                            <div class="input-group mb-2">
+                                <input type="text" class="form-control"
+                                    formControlName="state"
+                                    id="state"
+                                    placeholder="Enter State here">
+                            </div>
+                            </div>
+                    </div>
+
+                    <div class="row pt-2">
+                        <div class="col-md-12">
+                            <span>City</span>
+                            <div class="input-group mb-2">
+                                <input type="text" class="form-control"
+                                        formControlName="city"
+                                        id="city"
+                                        placeholder="Enter City here">
+                            </div>
+                        </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+                <div class="row">
+                    <div class="com-md-12">
+                        <h2>Add Medical Concerns</h2>
+                    </div>
+                    <div class="col-md-11 col-sm-10 col-10 tabs-convert-ninety-row">
+                    
+                        <div class="block p-3 mt-2" >
+                            <div class="row">
+                            <div class="col-md-12">
+                            <span>Type of illness</span>
+                            <div class="input-group mb-2">
+                                <input type="text" class="form-control"
+                                        placeholder="Enter Type of Illness here"
+                                        formControlName="typeOfIllness">
+                            </div>
+                            </div>
+                
+                        </div>
+                
+                        <div class="row">
+                            <div class="col-md-12">
+                            <form-errors [control]="f.typeOfIllness"></form-errors>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <span>Sympytoms</span>
+                                <div class="input-group mb-2">
+                                    <textarea class="form-control" formControlName="sympytoms" 
+                                    name="sympytoms" id="sympytoms" cols="30" rows="5"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="row pt-2">
+                            <div class="col-md-12">
+                                <span>Description</span>
+                                <div class="input-group mb-2">
+                                    <textarea class="form-control" formControlName="description" 
+                                    name="description" id="description" cols="30" rows="5"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="row">
+                            <div class="col-md-12">
+                            <form-errors [control]="f.description"></form-errors>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+    
+              
+            </form>
+
+
+               <div class="row">
+                    <div class="com-md-12">
+                        <h2>Schedule Appointment</h2>
+                    </div>
+                    <div class="col-md-11 col-sm-10 col-10 tabs-convert-ninety-row">
+                    
+                        <div class="block p-3 mt-2" >
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <span>Appointment Date</span>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="input-group mb-2">
+                                        <ngx-datepicker (ngModelChange)="dateChange($event)" [(ngModel)]="date"></ngx-datepicker>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="row">
+                                <div class="col-md-3" style="top: 50%; margin-top: 2.5rem">
+                                    <span>Appointment Time</span>
+                                </div>
+
+                                <div class="col-md-8">
+                                    <div class="input-group mb-2">
+                                        <ngb-timepicker  (ngModelChange)="timeChange($event)" [(ngModel)]="time"></ngb-timepicker>
+                                        <!-- <pre>Selected time: {{time | json}}</pre> -->
+                                                    
+                                    </div>
+                                </div>
+                            </div>
+
+
+                      
+                        <div class="row pt-2">
+                            <div class="col-md-3">
+                                <span>Mode of Appointment</span>
+                            </div>
+
+                            <div class="col-md-7">
+                                <div class="input-group mb-2">
+                                    Audio
+                                    <ui-switch [(ngModel)]="mode" [checked]="false"></ui-switch>
+                                    Video
+                                </div>
+                            </div>
+                        </div>
+                
+
+                        <div class="row pt-2">
+                            <div class="col-md-3">
+                                <span>Upload medical History (if any)</span>
+                                
+                            </div>
+
+                            <div class="col-md-7">
+                                <div class="input-group mb-2">
+                                    <input type="file" ng2FileSelect [uploader]="uploader">
+                                    <button (click)="uploader.uploadAll()">Upload </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-3 mb-3">
+                <button class="btn btn-primary" (click)="scheduleAppointment()">Submit</button>
+            </div>
+
+          </div>
+          
+          
+      </div>
+</div>
+
+<!-- <div *ngIf="showAlert" class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+    <button (click) = "showAlert = false" type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div> -->

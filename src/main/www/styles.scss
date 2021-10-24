@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+body{
+    background-image: url("assets/img/bg.jpg");
+    background-repeat: no-repeat;
+    background-color: #cccccc;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; 
+    opacity: 0.9;
+}
+.sr-only{
+    display: none !important;
+}
